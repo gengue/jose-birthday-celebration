@@ -209,9 +209,6 @@
     animation-duration: 130s;
 }
 
-.message-row:hover .message-track {
-    animation-play-state: paused;
-}
 
 /* Floating Messages */
 .message {
@@ -265,6 +262,10 @@
         0 10px 30px rgba(0, 0, 0, 0.2),
         inset 0 2px 4px rgba(255, 255, 255, 0.8);
     background: rgba(255, 255, 255, 0.98);
+}
+
+.message-track:has(.message:hover) {
+    animation-play-state: paused;
 }
 
 .message.removing {
